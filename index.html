@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="mn" data-site="appstore">
+
+<head>
+    <title>Нүүр | Gerege App Store — Gerege Eco System-ийн хаалттай суурь платформ</title>
+
+<!-- Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="title" content="Gerege App Store — Gerege Eco System-ийн хаалттай суурь платформ">
+<meta name="description" content="Gerege App Store нь Gerege Nexus дээр ажилладаг аппуудын албан ёсны каталог. Хувилбар бүр хянагдаж нийтлэгдэх бөгөөд Nexus суулгац бүр каталогийн гарын үсгийг шалгасны дараа л апп суулгана.">
+<meta name="keywords" content="Gerege App Store, Gerege Nexus, апп дэлгүүр, байгууллагын апп, Ed25519, гарын үсэгтэй каталог, eID Mongolia">
+<meta name="author" content="Gerege Systems">
+<meta name="robots" content="index, follow">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/images/appstore-logo.webp">
+
+    <!-- Theme: saved choice, else system preference (runs before paint) -->
+<script>
+    (function () {
+        var t;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+
+<!-- Google Font Link (https://fonts.google.com/) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <script type="module" crossorigin src="/assets/app-CljazDsf.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/app-BIvjGQwe.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+<header class="fixed top-0 inset-x-0 z-140 md:pt-5 pt-3 px-4">
+    <div class="max-w-260 mx-auto">
+        <div class="flex items-center justify-between gap-4 py-2.5 ps-5 pe-2.5 rounded-full border border-fg/10 bg-surface-2/80 backdrop-blur-xl">
+            <a href="/" class="flex items-center gap-2.5 shrink-0">
+                    <img src="/images/appstore-logo.webp" alt="Gerege App Store" class="h-7">
+                <span class="text-base font-medium tracking-[-0.02em] text-fg">gerege-<span class="text-muted">appstore</span></span>
+            </a>
+
+            <nav id="navbar" class="hidden lg:flex items-center gap-1">
+                                    <a href="/" class="py-2 px-4 rounded-full text-sm text-muted transition-colors hover:text-fg">Нүүр</a>
+                                    <a href="/#catalog" class="py-2 px-4 rounded-full text-sm text-muted transition-colors hover:text-fg">Каталог</a>
+                                    <a href="/#how" class="py-2 px-4 rounded-full text-sm text-muted transition-colors hover:text-fg">Хэрхэн ажилладаг</a>
+                                    <a href="/architecture" class="py-2 px-4 rounded-full text-sm text-muted transition-colors hover:text-fg">Архитектур</a>
+                                    <a href="/trust" class="py-2 px-4 rounded-full text-sm text-muted transition-colors hover:text-fg">Аюулгүй байдал</a>
+                            </nav>
+
+            <div class="flex items-center gap-2">
+                <button type="button" data-theme-toggle aria-label="Light / dark горим солих" class="inline-flex size-11 items-center justify-center rounded-full border border-fg/15 text-fg transition-colors hover:bg-fg/5">
+                    <i class="iconify tabler--moon size-5 theme-icon-dark"></i>
+                    <i class="iconify tabler--sun size-5 theme-icon-light"></i>
+                </button>
+
+                <a href="https://appstore.gerege.mn/login" class="md:inline-flex hidden items-center gap-2 h-11 px-5 rounded-full bg-accent text-on-accent text-sm font-medium">
+                    Нэвтрэх <i class="iconify tabler--arrow-up-right size-4"></i>
+                </a>
+
+                <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobile-menu" data-hs-overlay="#mobile-menu" class="lg:hidden inline-flex size-11 items-center justify-center rounded-full border border-fg/15 text-fg">
+                    <i class="iconify tabler--menu-2 size-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hs-overlay hs-overlay-open:translate-y-0 hs-overlay-open:opacity-100 opacity-0 hs-overlay-open:top-auto [--body-scroll:true] fixed inset-x-0 top-0 z-140 -translate-y-full transform transition-all duration-300 lg:hidden px-4" role="dialog" tabindex="-1" aria-labelledby="mobile-menu-label">
+        <div class="max-w-260 mx-auto mt-2 p-2 rounded-3xl border border-fg/10 bg-surface-2">
+            <div class="flex flex-col">
+                                    <a href="/" class="py-3.5 px-4 rounded-2xl text-fg hover:bg-fg/5">Нүүр</a>
+                                    <a href="/#catalog" class="py-3.5 px-4 rounded-2xl text-fg hover:bg-fg/5">Каталог</a>
+                                    <a href="/#how" class="py-3.5 px-4 rounded-2xl text-fg hover:bg-fg/5">Хэрхэн ажилладаг</a>
+                                    <a href="/architecture" class="py-3.5 px-4 rounded-2xl text-fg hover:bg-fg/5">Архитектур</a>
+                                    <a href="/trust" class="py-3.5 px-4 rounded-2xl text-fg hover:bg-fg/5">Аюулгүй байдал</a>
+                                <a href="https://appstore.gerege.mn/login" class="mt-2 h-13 inline-flex items-center justify-center rounded-2xl bg-accent text-on-accent font-medium">Нэвтрэх</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden lg:pt-44 pt-32">
+        <div class="absolute inset-0 glow-top -z-1"></div>
+
+        <div class="container relative">
+            <!-- Corner meta labels -->
+            <div class="hidden md:flex justify-between mb-14 text-fg">
+                <div class="label">Апп<span>дэлгүүр</span></div>
+                <div class="label text-center">Gerege<span>Nexus</span></div>
+                <div class="label text-end">Gerege<span>Systems</span></div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 items-center gap-10">
+                <div class="lg:col-span-7" data-aos="fade-up">
+                    <div class="flex flex-wrap gap-2 mb-7">
+                        <span class="pill"><span class="size-1.5 rounded-full bg-accent"></span> eID Mongolia</span>
+                        <span class="pill">Ed25519</span>
+                        <span class="pill">Гарын үсэгтэй каталог</span>
+                    </div>
+
+                    <h1 class="display mb-6">Байгууллагын <span class="text-accent">аппууд</span> <span class="text-muted">нэг найдвартай дэлгүүрээс.</span></h1>
+
+                    <p class="text-muted md:text-lg max-w-xl mb-6">Gerege App Store нь Gerege Nexus дээр ажилладаг аппуудын албан ёсны каталог. Хувилбар бүр хянагдаж нийтлэгдэх бөгөөд Nexus суулгац бүр каталогийн гарын үсгийг шалгасны дараа л апп суулгана.</p>
+
+                    <div class="flex flex-col gap-2 mb-9 text-sm">
+                        <span class="inline-flex items-center gap-2"><i class="iconify tabler--rosette-discount-check-filled size-5 text-accent"></i> Нийтлэгч бүр eID Mongolia-ээр баталгаажсан</span>
+                        <span class="inline-flex items-center gap-2"><i class="iconify tabler--signature size-5 text-accent"></i> Гарын үсэгтэй каталог — суулгац бүр шалгана</span>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3">
+                        <a href="https://appstore.gerege.mn/login" class="btn-accent">Эхлэх <i class="iconify tabler--arrow-up-right size-5"></i></a>
+                        <a href="#catalog" class="btn-ghost">Каталог үзэх</a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative flex justify-center" data-aos="fade-up" data-aos-delay="150">
+                    <!-- construction lines -->
+                    <div class="absolute inset-y-[-10%] start-[18%] w-px dashed-v"></div>
+                    <div class="absolute inset-y-[-10%] end-[18%] w-px dashed-v"></div>
+                    <div class="absolute inset-x-[-10%] top-[22%] h-px dashed-h"></div>
+                    <div class="absolute inset-[8%] rounded-full glow-accent blur-2xl"></div>
+
+                    <img src="/images/home/hero.webp" alt="Гарт барьсан утсан дээр нээлттэй Gerege апп" class="relative lg:max-h-150 max-h-105 w-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Giant cropped wordmark -->
+        <div class="relative mt-6 -mb-[4vw] text-center pointer-events-none" aria-hidden="true">
+            <div class="wordmark text-[clamp(90px,21vw,330px)] bg-linear-to-b from-fg/90 to-fg/0 bg-clip-text text-transparent">appstore</div>
+        </div>
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalog" class="relative lg:pt-30 pt-20 scroll-mt-24">
+        <div class="container">
+            <div class="grid lg:grid-cols-12 gap-6 mb-10">
+                <div class="lg:col-span-7">
+                    <div class="label text-accent mb-4">Каталог<span>catalog</span></div>
+                    <h2 class="h2">Нийтлэгдсэн <span class="text-muted">аппууд</span></h2>
+                </div>
+                <p class="lg:col-span-4 lg:col-start-9 self-end text-muted">Суулгацын администратор эдгээрийг Апп дэлгүүрээсээ шууд суулгана. Хувилбар бүр гарын үсэгтэй каталогоор тараагддаг.</p>
+            </div>
+
+            <!-- Category filter -->
+            <div class="flex flex-wrap gap-2 mb-8" role="tablist" aria-label="Ангилал">
+                <button type="button" data-filter="all" class="catalog-filter is-active">Бүгд <span>16</span></button>
+                                    <button type="button" data-filter="Ажил" class="catalog-filter">Ажил <span>1</span></button>
+                                    <button type="button" data-filter="Гэрээ" class="catalog-filter">Гэрээ <span>1</span></button>
+                                    <button type="button" data-filter="Платформ" class="catalog-filter">Платформ <span>5</span></button>
+                                    <button type="button" data-filter="Санхүү" class="catalog-filter">Санхүү <span>2</span></button>
+                                    <button type="button" data-filter="Төрийн үйлчилгээ" class="catalog-filter">Төрийн үйлчилгээ <span>1</span></button>
+                                    <button type="button" data-filter="Хөгжүүлэгчийн хэрэгсэл" class="catalog-filter">Хөгжүүлэгчийн хэрэгсэл <span>1</span></button>
+                                    <button type="button" data-filter="Эрчим хүч" class="catalog-filter">Эрчим хүч <span>2</span></button>
+                                    <button type="button" data-filter="e-Property" class="catalog-filter">e-Property <span>3</span></button>
+                            </div>
+
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+                                                            <article data-cat="Ажил" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/checklist.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v0.10.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Ажил</div>
+                                <h3 class="text-xl mb-2">Tasker</h3>
+                                <p class="text-sm text-muted">Даалгавар, төсөл, ажилтан, алба хэлтэс нэг дор: ажил оноож хянах, хүн бүрийн ачааллыг харах, AI туслахаар яриагаар даалгаврын ноорог гаргаж батлах.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">io.gerege.nexus.tasker</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                                                                <article data-cat="Гэрээ" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/task-clipboard.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v1.4.1</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Гэрээ</div>
+                                <h3 class="text-xl mb-2">Гэрээ</h3>
+                                <p class="text-sm text-muted">Гэрээгээ бичиж эсвэл PDF хавсаргаад талуудаа нэрлэнэ — тал бүр өөрийн eID-ээр гарын үсэг зурна.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">mn.contract.contracts</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                                                                <article data-cat="Платформ" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/share.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v1.0.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Платформ</div>
+                                <h3 class="text-xl mb-2">API гарц</h3>
+                                <p class="text-sm text-muted">Байгууллагынхаа HTTP API-г түүнийг дууддаг системүүдэд нээх: API бүрд нэг хаяг, дуудагч бүрд түлхүүр, хурдны хязгаар, дуудлага бүрийн өдрийн тоо.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">io.gerege.nexus.api_gateway</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                            <article data-cat="Платформ" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/rocket.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v2.0.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Платформ</div>
+                                <h3 class="text-xl mb-2">Апп нийтлэлт</h3>
+                                <p class="text-sm text-muted">Апп нийтлэх, илгээсэн хувилбарыг хянах, Gerege Nexus-ийн бүх инстанс уншдаг гарын үсэгтэй каталогийг удирдах.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">io.gerege.nexus.appstore_registry</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                            <article data-cat="Платформ" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/user-profile.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v2.0.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Платформ</div>
+                                <h3 class="text-xl mb-2">Бүртгэл</h3>
+                                <p class="text-sm text-muted">Байгууллагын хэлтэс нэгж, ажилтнууд, түүнчлэн харилцагч, үйлчлүүлэгч, нийлүүлэгчдийн бүртгэл — дотор, гадна хоёр тал нэг дор.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">io.gerege.nexus.organisation</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                            <article data-cat="Платформ" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d/keys.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v2.1.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Платформ</div>
+                                <h3 class="text-xl mb-2">SSO клиентүүд</h3>
+                                <p class="text-sm text-muted">Энэ платформоор дамжуулан хэрэглэгч нэвтрүүлэх системүүдийг бүртгэх: OAuth2 / OpenID Connect клиент ба тэдгээрийн эрхийн мэдээлэл.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">io.gerege.nexus.sso_clients</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                            <article data-cat="Платформ" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/globe.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v1.0.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Платформ</div>
+                                <h3 class="text-xl mb-2">Цахим засгийн холболт</h3>
+                                <p class="text-sm text-muted">Байгууллагын төрийн системтэй холбогдох цэг: ХУР-ын лавлагаа, eID ба ДАН суваг, лавлагааны түүх.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">io.gerege.nexus.egov</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                                                                <article data-cat="Санхүү" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/phone-card.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v1.0.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Санхүү</div>
+                                <h3 class="text-xl mb-2">Gerege Pay</h3>
+                                <p class="text-sm text-muted">Байгууллагын тооцоо хийдэг худалдаачид, тэдний харилцагчийн өмнө зогсох терминалууд, тэр терминалуудын хүлээн авсан гүйлгээ.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">mn.gerege.pay</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                            <article data-cat="Санхүү" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d/briefcase-glass.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v1.1.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Санхүү</div>
+                                <h3 class="text-xl mb-2">Gerege Wallet</h3>
+                                <p class="text-sm text-muted">Хувь хүний өөрийн данс, үлдэгдэл, гүйлгээний түүх, данс цэнэглэх заавар, бусад руу хийх шилжүүлэг — core banking-ийн дэвтэр дээр.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">mn.gerege.bank</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                                                                <article data-cat="Төрийн үйлчилгээ" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d/badge-glass.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v1.0.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Төрийн үйлчилгээ</div>
+                                <h3 class="text-xl mb-2">Төрийн үйлчилгээ</h3>
+                                <p class="text-sm text-muted">Байгууллагын иргэнд санал болгож буй үйлчилгээ, тэдгээрт ирсэн хүсэлтүүд.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">mn.gerege.gov</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                                                                <article data-cat="Хөгжүүлэгчийн хэрэгсэл" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/puzzle-check.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v1.3.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Хөгжүүлэгчийн хэрэгсэл</div>
+                                <h3 class="text-xl mb-2">Mini апп-ууд</h3>
+                                <p class="text-sm text-muted">Gerege App дотор нээгддэг гуравдагч талын вэб апп-ууд: тэдгээрийг хөгжүүлэгч байгууллагын консол, операторын хяналтын дараалал, хүний зөвшөөрснөөс өөр юу ч дамжуулдаггүй нээлт.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">mn.gerege.miniapp</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                                                                <article data-cat="Эрчим хүч" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/lightning.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v0.1.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Эрчим хүч</div>
+                                <h3 class="text-xl mb-2">PowerGrid App</h3>
+                                <p class="text-sm text-muted">Өөрийн цахилгаан: eID-ээр дансаа холбож, хэрэглээ, нэхэмжлэлээ харах, гар утсаар төлөх, өгөгдлөө татах, хуваалцах.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">io.gerege.powergrid.app</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                            <article data-cat="Эрчим хүч" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d/spheres-glass.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v0.4.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">Эрчим хүч</div>
+                                <h3 class="text-xl mb-2">PowerGrid Hub</h3>
+                                <p class="text-sm text-muted">PowerGrid Hub: түгээх компаниудын хэмжилтийн өгөгдлийн үндэсний hub — сүлжээний бүртгэл, заалт, энергийн баланс, төлбөрийн хаб, PowerGrid-ийн өөрийн billing.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">io.gerege.powergrid</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                                                                <article data-cat="e-Property" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/home.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v0.2.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">e-Property</div>
+                                <h3 class="text-xl mb-2">Миний өмч</h3>
+                                <p class="text-sm text-muted">Худалдан авагчийн апп: нэгж хадгалах, гэрээнд гарын үсэг зурах, бүх хөгжүүлэгчийн хадгалалт, гэрээ, өөрчлөлтийн мэдэгдлийг нэг дор харах.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">mn.eproperty.my</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                            <article data-cat="e-Property" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/folder-chart.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v0.2.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">e-Property</div>
+                                <h3 class="text-xl mb-2">Төсөл ба борлуулалт</h3>
+                                <p class="text-sm text-muted">Хөгжүүлэгчийн бүртгэл нэг аппад: төсөл ба нотлох баримт, нэгж, хадгалалт, eidmongolia.mn-ээр зурсан гэрээ, барилгын явцтай уялдсан төлбөр, УБЕГ-ийн хүсэлт.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">mn.eproperty.projects</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                            <article data-cat="e-Property" class="catalog-card group rounded-3xl bg-surface border border-fg/8 p-6 flex flex-col gap-5 transition-colors hover:border-accent/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="size-16 shrink-0 inline-flex items-center justify-center rounded-2xl bg-bg border border-fg/8">
+                                    <img src="/images/icons3d-white/monitor.webp" alt="" class="size-12 object-contain transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[-4deg]" loading="lazy">
+                                </span>
+                                <span class="pill">v0.1.0</span>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="text-xs text-muted mb-1.5">e-Property</div>
+                                <h3 class="text-xl mb-2">Операторын хяналт</h3>
+                                <p class="text-sm text-muted">Операторын дараалал: төслийг борлуулалтад нээхээс өмнөх хоёр шатны батлалт, түр зогсоох, hash chain-ийн шалгалт.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-fg/8 text-xs">
+                                <code class="text-muted truncate">mn.eproperty.oversight</code>
+                                <span class="shrink-0 font-medium">Gerege Systems</span>
+                            </div>
+                        </article>
+                                                </div>
+        </div>
+    </section>
+
+    <!-- How It Works — step cards -->
+    <section id="how" class="lg:py-40 py-24 scroll-mt-24">
+        <div class="container">
+            <div class="grid lg:grid-cols-12 gap-6 mb-12">
+                <div class="lg:col-span-7">
+                    <div class="label text-accent mb-4">Хэрхэн<span>ажилладаг</span></div>
+                    <h2 class="h2">Нийтлэхээс суулгах хүртэл <span class="text-muted">нэг урсгал</span></h2>
+                </div>
+                <p class="lg:col-span-4 lg:col-start-9 self-end text-muted">Нийтлэгч manifest илгээнэ, хянагч баталж нийтэлнэ, каталог гарын үсэгтэйгээр тарна, байгууллагын админ нэг товчоор суулгана.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
+                <div class="group rounded-3xl bg-surface border border-fg/8 p-6 md:min-h-90 min-h-60 flex flex-col justify-between" data-aos="fade-up">
+                    <img src="/images/icons3d-white/megaphone.webp" alt="" class="size-24 -ms-3 -mt-3 transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-[-4deg]" loading="lazy">
+                    <div>
+                        <div class="text-xs text-muted mb-2">01</div>
+                        <h3 class="text-2xl mb-3">Нийтлэгчийн студи</h3>
+                        <p class="text-sm text-muted">Байгууллага бүр аппаа бүртгэж, хувилбар бүрийн manifest-ийг — эрх, цэс, хамаарал, шаардах платформын хувилбар — илгээнэ.</p>
+                    </div>
+                </div>
+
+                <div class="group rounded-3xl bg-inv text-inv-fg p-6 md:min-h-90 min-h-60 flex flex-col justify-between lg:mt-10" data-aos="fade-up" data-aos-delay="80">
+                    <img src="/images/icons3d-white/checklist.webp" alt="" class="size-24 -ms-3 -mt-3 transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-[-4deg]" loading="lazy">
+                    <div>
+                        <div class="text-xs text-inv-fg/50 mb-2">02</div>
+                        <h3 class="text-2xl mb-3">Хяналтын дараалал</h3>
+                        <p class="text-sm text-inv-fg/60">Ирсэн хувилбар бүр хянагчийн дараалалд орно. Нийтлэх, татгалзах, буцаан татах шийдвэр бүр аудитад бичигдэнэ.</p>
+                    </div>
+                </div>
+
+                <div class="group rounded-3xl bg-accent text-on-accent p-6 md:min-h-90 min-h-60 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="160">
+                    <img src="/images/icons3d-white/safe-package.webp" alt="" class="size-24 -ms-3 -mt-3 transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-[-4deg]" loading="lazy">
+                    <div>
+                        <div class="text-xs text-on-accent/60 mb-2">03</div>
+                        <h3 class="text-2xl mb-3">Гарын үсэгтэй каталог</h3>
+                        <p class="text-sm text-on-accent/75">Каталогт Ed25519 түлхүүрээр гарын үсэг зурна. Суулгац бүр нийтийн түлхүүрийг нь тогтоож, шалгалт давахгүй каталогийг хүлээж авахгүй.</p>
+                    </div>
+                </div>
+
+                <div class="group rounded-3xl bg-surface border border-fg/8 p-6 md:min-h-90 min-h-60 flex flex-col justify-between lg:mt-10" data-aos="fade-up" data-aos-delay="240">
+                    <img src="/images/icons3d-white/phone-download.webp" alt="" class="size-24 -ms-3 -mt-3 transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-[-4deg]" loading="lazy">
+                    <div>
+                        <div class="text-xs text-muted mb-2">04</div>
+                        <h3 class="text-2xl mb-3">Нэг товчоор суулгана</h3>
+                        <p class="text-sm text-muted">Байгууллагын админ Nexus-ийнхээ Апп дэлгүүрээс суулгана; хамаарал болон хувилбарын шалгалт автоматаар хийгдэнэ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Steps — light rhythm break -->
+    <section id="steps" class="scroll-mt-24 px-4">
+        <div class="max-w-330 mx-auto rounded-[32px] bg-inv text-inv-fg lg:p-16 md:p-10 p-7">
+            <div class="flex md:flex-row flex-col md:items-end justify-between gap-6 mb-14">
+                <div>
+                    <div class="label mb-4">Гурван<span class="text-inv-fg/45!">алхам</span></div>
+                    <h2 class="h2 text-inv-fg">Нийтлэлээс суулгалт хүртэл <span class="text-inv-fg/40">гурван алхам</span></h2>
+                </div>
+                <p class="text-inv-fg/55 md:max-w-xs">Апп бүр ижил замаар явна: нийтлэгч, хяналт, дараа нь таны Nexus.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 border-t border-inv-fg/12">
+                <div class="pt-8 md:pe-8 pb-6 md:border-e border-b md:border-b-0 border-inv-fg/12" data-aos="fade-up">
+                    <div class="flex items-center justify-between mb-8"><div class="text-[clamp(64px,8vw,120px)] font-medium tracking-[-0.05em] leading-none">01</div><img src="/images/icons3d-white/folder-files.webp" alt="" class="size-20" loading="lazy"></div>
+                    <h3 class="text-2xl text-inv-fg mb-2">Нийтлэгч</h3>
+                    <p class="text-inv-fg/55">Manifest, хувилбар, тайлбар</p>
+                </div>
+                <div class="pt-8 md:px-8 pb-6 md:border-e border-b md:border-b-0 border-inv-fg/12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-between mb-8"><div class="text-[clamp(64px,8vw,120px)] font-medium tracking-[-0.05em] leading-none">02</div><img src="/images/icons3d-white/user-profile.webp" alt="" class="size-20" loading="lazy"></div>
+                    <h3 class="text-2xl text-inv-fg mb-2">Хяналт</h3>
+                    <p class="text-inv-fg/55">Баталгаажсан нийтлэгч, хянагчийн шийдвэр</p>
+                </div>
+                <div class="pt-8 md:ps-8 pb-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-between mb-8"><div class="text-[clamp(64px,8vw,120px)] font-medium tracking-[-0.05em] leading-none">03</div><img src="/images/icons3d-white/gears.webp" alt="" class="size-20" loading="lazy"></div>
+                    <h3 class="text-2xl text-inv-fg mb-2">Таны Nexus</h3>
+                    <p class="text-inv-fg/55">Гарын үсэгтэй каталог, нэг товчоор суулгах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section id="trust" class="lg:py-40 py-24 scroll-mt-24">
+    <div class="container">
+        <div class="relative overflow-hidden rounded-[32px] bg-surface border border-fg/8 lg:p-16 md:p-10 p-7">
+            <div class="absolute -top-40 -end-40 size-120 rounded-full glow-accent blur-3xl opacity-60 pointer-events-none"></div>
+
+            <div class="relative grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-6">
+                    <div class="label text-accent mb-4">Баталгаа<span>trust</span></div>
+                    <h2 class="h2 mb-6">Нийтлэгчээс суулгац хүртэл <span class="text-muted">нэг баталгааны гинж</span></h2>
+                    <p class="text-muted mb-10 max-w-lg">Баталгаажсан нийтлэгч → хянагдсан manifest → гарын үсэгтэй каталог → тогтоосон түлхүүр → суулгац. Алхам бүр шалгагдана.</p>
+
+                    <div class="flex flex-wrap gap-2">
+                                                    <span class="pill">eID Mongolia</span>
+                                                    <span class="pill">Ed25519</span>
+                                                    <span class="pill">Audit</span>
+                                                    <span class="pill">Pinned key</span>
+                                            </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col gap-2.5">
+                                            <div class="flex items-center gap-4 h-16 ps-2.5 pe-4 rounded-2xl bg-surface-2" data-aos="fade-up" data-aos-delay="0">
+                            <span class="size-11 shrink-0 inline-flex items-center justify-center rounded-xl bg-bg border border-fg/8">
+                                <img src="/images/icons3d-white/user-profile.webp" alt="" class="size-8 object-contain" loading="lazy">
+                            </span>
+                            <span class="flex-1 text-[15px] font-medium">Баталгаажсан нийтлэгч</span>
+                            <span class="text-xs text-muted">01</span>
+                        </div>
+                                            <div class="flex items-center gap-4 h-16 ps-2.5 pe-4 rounded-2xl bg-surface-2" data-aos="fade-up" data-aos-delay="80">
+                            <span class="size-11 shrink-0 inline-flex items-center justify-center rounded-xl bg-bg border border-fg/8">
+                                <img src="/images/icons3d-white/checklist.webp" alt="" class="size-8 object-contain" loading="lazy">
+                            </span>
+                            <span class="flex-1 text-[15px] font-medium">Хянагдсан manifest</span>
+                            <span class="text-xs text-muted">02</span>
+                        </div>
+                                            <div class="flex items-center gap-4 h-16 ps-2.5 pe-4 rounded-2xl bg-surface-2" data-aos="fade-up" data-aos-delay="160">
+                            <span class="size-11 shrink-0 inline-flex items-center justify-center rounded-xl bg-bg border border-fg/8">
+                                <img src="/images/icons3d-white/safe-package.webp" alt="" class="size-8 object-contain" loading="lazy">
+                            </span>
+                            <span class="flex-1 text-[15px] font-medium">Гарын үсэгтэй каталог</span>
+                            <span class="text-xs text-muted">03</span>
+                        </div>
+                                            <div class="flex items-center gap-4 h-16 ps-2.5 pe-4 rounded-2xl bg-surface-2" data-aos="fade-up" data-aos-delay="240">
+                            <span class="size-11 shrink-0 inline-flex items-center justify-center rounded-xl bg-bg border border-fg/8">
+                                <img src="/images/icons3d/keys.webp" alt="" class="size-8 object-contain" loading="lazy">
+                            </span>
+                            <span class="flex-1 text-[15px] font-medium">Тогтоосон түлхүүр</span>
+                            <span class="text-xs text-muted">04</span>
+                        </div>
+                                                            <div class="group flex items-center gap-4 h-16 ps-2.5 pe-4 rounded-2xl bg-accent text-on-accent" data-aos="fade-up" data-aos-delay="320">
+                        <span class="size-11 shrink-0 inline-flex items-center justify-center rounded-xl bg-bg">
+                            <img src="/images/icons3d-white/phone-download.webp" alt="" class="size-8 object-contain" loading="lazy">
+                        </span>
+                        <span class="flex-1 text-[15px] font-medium">Суулгац</span>
+                                                    <i class="iconify tabler--circle-check-filled size-5"></i>
+                                            </div>
+
+                    <div class="grid sm:grid-cols-2 gap-2.5 mt-6">
+                                                    <div class="flex items-start gap-3 p-4 rounded-2xl border border-fg/8">
+                                <i class="iconify tabler--circle-check-filled size-5 text-accent shrink-0 mt-0.5"></i>
+                                <p class="text-sm">Нийтлэгч eID Mongolia-ээр баталгаажна</p>
+                            </div>
+                                                    <div class="flex items-start gap-3 p-4 rounded-2xl border border-fg/8">
+                                <i class="iconify tabler--circle-check-filled size-5 text-accent shrink-0 mt-0.5"></i>
+                                <p class="text-sm">Нийтлэгч, хянагчийн эрх тусдаа</p>
+                            </div>
+                                                    <div class="flex items-start gap-3 p-4 rounded-2xl border border-fg/8">
+                                <i class="iconify tabler--circle-check-filled size-5 text-accent shrink-0 mt-0.5"></i>
+                                <p class="text-sm">Ed25519 гарын үсэг, тогтоосон нийтийн түлхүүр</p>
+                            </div>
+                                                    <div class="flex items-start gap-3 p-4 rounded-2xl border border-fg/8">
+                                <i class="iconify tabler--circle-check-filled size-5 text-accent shrink-0 mt-0.5"></i>
+                                <p class="text-sm">Хяналтын шийдвэр бүр аудитад</p>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Call To Action Section -->
+    <section class="relative lg:pb-30 pb-20 overflow-hidden">
+    <div class="absolute inset-x-0 bottom-0 h-[70%] -z-1" style="background: radial-gradient(50% 60% at 50% 100%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%)"></div>
+
+    <div class="container text-center">
+        <img src="/images/icons3d-white/rocket.webp" alt="" class="size-28 mx-auto mb-6" loading="lazy">
+        <div class="label mb-6">Эхлэх<span>start</span></div>
+        <h2 class="display max-w-4xl mx-auto mb-6">Аппаа Gerege App Store-д <span class="text-accent">нийтлээрэй</span></h2>
+        <p class="text-muted md:text-lg mb-10">eID Mongolia-ээр нэвтэрч байгууллагаа нийтлэгчээр бүртгүүлээд эхний хувилбараа илгээнэ.</p>
+
+        <a href="https://appstore.gerege.mn/login" class="btn-accent">Эхлэх <i class="iconify tabler--arrow-up-right size-5"></i></a>
+    </div>
+</section>
+
+    <!-- Footer -->
+<footer id="footer" class="relative overflow-hidden border-t border-fg/8 pt-20">
+    <div class="container">
+        <div class="flex flex-col items-center text-center mb-16">
+                <img src="/images/appstore-logo.webp" alt="Gerege App Store" class="h-14 mb-5">
+            <p class="text-muted">Gerege Eco System-ийн хаалттай суурь платформ.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10 pb-12 border-b border-fg/8">
+            <div>
+                <div class="label mb-5">Цэс<span>menu</span></div>
+                <div class="space-y-3 *:block *:text-muted *:hover:text-fg *:transition-colors">
+                                                                        <a href="/">Нүүр</a>
+                                                                                                <a href="/#catalog">Каталог</a>
+                                                                                                <a href="/#how">Хэрхэн ажилладаг</a>
+                                                                                                <a href="/architecture">Архитектур</a>
+                                                                                                        </div>
+            </div>
+
+            <div class="md:text-center">
+                <div class="label mb-5">Платформ<span>platform</span></div>
+                <div class="space-y-3 *:block *:text-muted *:hover:text-fg *:transition-colors">
+                    <a href="/trust">Аюулгүй байдал</a>
+                                        <a href="https://appstore.gerege.mn/login">Нэвтрэх</a>
+                </div>
+            </div>
+
+            <div class="md:text-end">
+                <div class="label mb-5">Gerege<span>systems</span></div>
+                <p class="text-muted">Gerege Nexus дээр суурилсан</p>
+            </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col justify-between gap-2 py-6 text-xs text-muted">
+            <div>© 2026 Gerege Systems · Gerege App Store</div>
+            <div><span>BUILT ON</span> <span class="text-fg font-bold">GEREGE NEXUS</span></div>
+        </div>
+    </div>
+
+    <div class="text-center -mb-[6vw] pointer-events-none" aria-hidden="true">
+        <div class="wordmark bg-linear-to-b from-accent/70 via-accent/20 to-transparent bg-clip-text text-transparent">gerege</div>
+    </div>
+</footer>
+
+    <script>
+        // Catalog category filter
+        document.querySelectorAll('.catalog-filter').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const cat = btn.dataset.filter;
+                document.querySelectorAll('.catalog-filter').forEach((b) => b.classList.toggle('is-active', b === btn));
+                document.querySelectorAll('.catalog-card').forEach((card) => {
+                    card.hidden = cat !== 'all' && card.dataset.cat !== cat;
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
